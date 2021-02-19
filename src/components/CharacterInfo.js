@@ -10,10 +10,6 @@ const CharacterInfo = styled.div`
     flex-direction: column;
     /* if the props given are invis then the display will be none */
     display: ${(props) => props.invis ? 'none' : 'flex'};
-    ul {
-        background-color: white;
-        padding: 2rem;
-    }
 `;
 
 export default (props) => {
