@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'; // Importing useState and useEffect from React lib
 import './App.css';
-
 // importing Axios to make requests to the API
 import axios from 'axios';
 // importing the character component
 import Character from './components/Character';
 // importing styled components
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const AppContainer = styled.div`
   text-align: center;

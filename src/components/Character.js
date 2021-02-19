@@ -6,6 +6,7 @@ import styled from 'styled-components';
 // importing the CharacterInfo component
 import CharacterInfo from './CharacterInfo';
 
+// styled component
 const Character = styled.div`
     background-color: #CCD5AE;
     height: 6rem;
@@ -23,17 +24,18 @@ const Character = styled.div`
 
 export default (props) => {
     const { character } = props;
+    
     // putting the needed info into an object for CharacterInfo
     const {name, ...rest} = character;
 
-    const [invisibleInfo, setInvisibleInfo] = useState(true)
+    // state for the invis prop of CharacterInfo component
+    const [invisibleInfo, setInvisibleInfo] = useState(true);
 
     return (
         <Character>
             <h1>{character.name}</h1>
             <button onClick={() => setInvisibleInfo(!invisibleInfo)} >More Info on {character.name}</button>
-            
             <CharacterInfo info={rest} invis={invisibleInfo}/>
         </Character>
-    )
+    );
 } 
